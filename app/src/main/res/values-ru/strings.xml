@@ -77,6 +77,10 @@
     <string name="trackobotNetworkError">Ошибка сети Track-o-bot</string>
     <string name="trackobotError">Не удалось загрузить(</string>
     <string name="trackobotSuccess">Игра загружается в Track-o-bot</string>
+    <string name="yourDeck">"Ваша палуба "</string>
+    <string name="waitingForCards">"Загрузка карты... "</string>
+    <string name="opponentsDeck">"Оппоненты Палуба "</string>
+    <string name="arenaDeck">"Арена Палуба "</string>
 
 </resources>
 

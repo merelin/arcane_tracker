@@ -70,4 +70,7 @@
     <string name="trackobotError">Could not upload to Track-o-bot :-(</string>
     <string name="trackobotSuccess">Game uploaded to Track-o-bot</string>
     <string name="waitingForCards">Downloading Cards...</string>
+    <string name="arenaDeck">Arena Deck</string>
+    <string name="opponentsDeck">Opponents Deck</string>
+    <string name="yourDeck">Your Deck</string>
 </resources>

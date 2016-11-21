@@ -69,4 +69,9 @@
     <string name="unlinkAccount">Déconnecter le compte</string>
     <string name="username">"Identifiant: "</string>
     <string name="welcome">Bienvenue sur Arcane Tracker !</string>
+    <string name="app_name">Arcane Tracker</string>
+    <string name="yourDeck">"Votre Deck "</string>
+    <string name="waitingForCards">"Téléchargement de cartes... "</string>
+    <string name="opponentsDeck">"Deck des adversaires "</string>
+    <string name="arenaDeck">"Arène Deck "</string>
 </resources>
