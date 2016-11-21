@@ -4,4 +4,7 @@
         <ignore regexp="okio.*jar"/>
         <ignore regexp="retrofit-2.1.0.jar"/>
     </issue>
+    <issue id="UnusedResources" severity="ignore">
+        <ignore regexp="ga_trackingId|google_crash_reporting_api_key" />
+    </issue>
 </lint>

@@ -1,0 +1,4726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 2.3.0-alpha1">
+
+    <issue
+        id="GradleCompatible"
+        message="All com.android.support libraries must use the exact same version specification (mixing versions can lead to runtime crashes). Found versions 24.2.1, 24.2.0. Examples include com.android.support:animated-vector-drawable:24.2.1 and com.android.support:cardview-v7:24.2.0">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="ScrollViewSize"
+        message="This LinearLayout should use `android:layout_height=&quot;wrap_content&quot;`"
+        errorLine1="            android:layout_height=&quot;match_parent&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        return String.format(&quot;hero_%02d&quot;, classIndex + 1);"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Card.java"
+            line="107"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        String locale = Locale.getDefault().getLanguage().toLowerCase();"
+        errorLine2="                                                          ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardDb.java"
+            line="119"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        String locale = Locale.getDefault().getLanguage().toLowerCase();"
+        errorLine2="                                                          ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="40"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            mSearchQuery = searchQuery.toLowerCase();"
+        errorLine2="                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="109"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                if (card.text != null &amp;&amp; card.text.toLowerCase().indexOf(mSearchQuery) != -1) {"
+        errorLine2="                                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="151"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                if (!found &amp;&amp; card.name != null &amp;&amp; card.name.toLowerCase().indexOf(mSearchQuery) != -1) {"
+        errorLine2="                                                             ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="155"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                if (!found &amp;&amp; card.race != null &amp;&amp; card.race.toLowerCase().indexOf(mSearchQuery) != -1) {"
+        errorLine2="                                                             ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="159"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        ((ImageView)view.findViewById(R.id.imageView)).setImageDrawable(Utils.getDrawableForName(String.format(&quot;hero_%02d_round&quot;, position + 1)));"
+        errorLine2="                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/ClassAdapter.java"
+            line="27"
+            column="98"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        ((ImageView)(view.findViewById(R.id.deckImageRound))).setImageDrawable(Utils.getDrawableForName(String.format(&quot;hero_%02d_round&quot;, deck.classIndex + 1)));"
+        errorLine2="                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckListAdapter.java"
+            line="47"
+            column="105"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                    String w = String.format(&quot;truncated file ? (%s) [%d -> %d]&quot;, mLog, lastSize, size );"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/LogReader.java"
+            line="104"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            if (cardId.toLowerCase().startsWith(&quot;hero_&quot;)) {"
+        errorLine2="                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="98"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="            list.add(String.format(&quot;%d unknown cards&quot;, 30 - mDeck.getCardCount()));"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/PlayerDeckAdapter.java"
+            line="45"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        int id = context.getResources().getIdentifier(cardId.toLowerCase(), &quot;drawable&quot;, context.getPackageName());"
+        errorLine2="                                                             ~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Utils.java"
+            line="34"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 16 (current min is 14): `android.Manifest.permission#READ_EXTERNAL_STORAGE`"
+        errorLine1="        boolean has = checkCallingOrSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainActivity.java"
+            line="78"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        errorLine1="        targetSdkVersion 24"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="9"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SdCardPath"
+        message="Do not hardcode &quot;/sdcard/&quot;; use `Environment.getExternalStorageDirectory().getPath()` instead"
+        errorLine1="    public static final String HEARTHSTONE_FILES_DIR = &quot;/sdcard/Android/data/com.blizzard.wtcg.hearthstone/files/&quot;;"
+        errorLine2="                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainActivity.java"
+            line="36"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="        SimpleDateFormat df = new SimpleDateFormat(&quot;dd-MMM-yyyy HH:mm:ss&quot;);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Utils.java"
+            line="73"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `networkSecurityConfig` is only used in API level 24 and higher (current min is 14)"
+        errorLine1="        android:networkSecurityConfig=&quot;@xml/network_security_config&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorAccent&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/create_deck_view.xml"
+            line="69"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                android:backgroundTint=&quot;#00ffffff&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="49"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="100"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/delete_confirmation_view.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/rename_deck_view.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="            android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/reset_counter_confirm_view.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="52"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                    android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="210"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                    android:backgroundTint=&quot;#fff&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="218"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                    android:backgroundTint=&quot;@color/colorPrimary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="279"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                    android:backgroundTint=&quot;#fff&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="287"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `backgroundTint` is only used in API level 21 and higher (current min is 14)"
+        errorLine1="                    android:backgroundTint=&quot;@color/colorAccent&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="314"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view, null);"
+        errorLine2="                                                                                         ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="68"
+            column="90"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.class_item_view, null);"
+        errorLine2="                                                                                               ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/ClassAdapter.java"
+            line="20"
+            column="96"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        return (CreateDeckView) LayoutInflater.from(context).inflate(R.layout.create_deck_view, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CreateDeckView.java"
+            line="27"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="                ViewGroup barTemplate = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.bar_template, null);"
+        errorLine2="                                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="133"
+            column="113"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bar_card, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="134"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="                ViewGroup barTemplate = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.bar_template, null);"
+        errorLine2="                                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="142"
+            column="113"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bar_text, null);"
+        errorLine2="                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="143"
+            column="97"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        return (DeckEditorView) LayoutInflater.from(new ContextThemeWrapper(context, android.R.style.Theme_Material_Light)).inflate(R.layout.deck_editor_view, null);"
+        errorLine2="                                                                                                                                                               ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckEditorView.java"
+            line="72"
+            column="160"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(ArcaneTrackerApplication.getContext()).inflate(R.layout.deck_line_view, null);"
+        errorLine2="                                                                                                                ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckListAdapter.java"
+            line="30"
+            column="113"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View view = LayoutInflater.from(context).inflate(R.layout.waiting_cards_view, null);"
+        errorLine2="                                                                                          ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainActivity.java"
+            line="141"
+            column="91"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View view = LayoutInflater.from(ArcaneTrackerApplication.getContext()).inflate(R.layout.main_view, null);"
+        errorLine2="                                                                                                               ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainViewCompanion.java"
+            line="262"
+            column="112"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        handlesView = (HandlesView) LayoutInflater.from(v.getContext()).inflate(R.layout.handles_view, null);"
+        errorLine2="                                                                                                       ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainViewCompanion.java"
+            line="340"
+            column="104"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(this).inflate(R.layout.settings_view, null);"
+        errorLine2="                                                                              ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsActivity.java"
+            line="18"
+            column="79"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = LayoutInflater.from(v.getContext()).inflate(R.layout.menu_view, null);"
+        errorLine2="                                                                                    ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsButtonCompanion.java"
+            line="21"
+            column="85"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View deckListView = LayoutInflater.from(v2.getContext()).inflate(R.layout.decklist_view, null);"
+        errorLine2="                                                                                                     ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsButtonCompanion.java"
+            line="32"
+            column="102"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View view2 = LayoutInflater.from(v2.getContext()).inflate(R.layout.delete_confirmation_view, null);"
+        errorLine2="                                                                                                         ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsButtonCompanion.java"
+            line="80"
+            column="106"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View view2 = LayoutInflater.from(v2.getContext()).inflate(R.layout.rename_deck_view, null);"
+        errorLine2="                                                                                                 ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsButtonCompanion.java"
+            line="108"
+            column="98"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="            View view2 = LayoutInflater.from(v2.getContext()).inflate(R.layout.reset_counter_confirm_view, null);"
+        errorLine2="                                                                                                           ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsButtonCompanion.java"
+            line="128"
+            column="108"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view2 = LayoutInflater.from(context).inflate(R.layout.settings_view, null);"
+        errorLine2="                                                                                  ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/SettingsCompanion.java"
+            line="324"
+            column="83"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:support-v4 than 24.2.1 is available: 25.0.0"
+        errorLine1="    compile &quot;com.android.support:support-v4:$supportLibVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="69"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:appcompat-v7 than 24.2.1 is available: 25.0.0"
+        errorLine1="    compile &quot;com.android.support:appcompat-v7:$supportLibVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="70"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:design than 24.2.0 is available: 25.0.0"
+        errorLine1="    compile &quot;com.android.support:design:$supportLibVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="71"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:recyclerview-v7 than 24.2.0 is available: 25.0.0"
+        errorLine1="    compile &quot;com.android.support:recyclerview-v7:$supportLibVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="72"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:cardview-v7 than 24.2.0 is available: 25.0.0"
+        errorLine1="    compile &quot;com.android.support:cardview-v7:$supportLibVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="73"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-auth than 9.6.1 is available: 9.8.0"
+        errorLine1="    compile &quot;com.google.android.gms:play-services-auth:$playServicesVersion&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="88"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:multidex than 1.0.0 is available: 1.0.1"
+        errorLine1="    compile &apos;com.android.support:multidex:1.0.0&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="92"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.android.support:appcompat-v7 than 24.2.1 is available: 25.0.0"
+        errorLine1="    compile &apos;com.android.support:appcompat-v7:24.2.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="97"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.code.gson:gson than 2.7 is available: 2.8.0"
+        errorLine1="    compile &apos;com.google.code.gson:gson:2.7&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="75"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.squareup.okhttp3:okhttp than 3.4.1 is available: 3.4.2"
+        errorLine1="    compile &apos;com.squareup.okhttp3:okhttp:3.4.1&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="77"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of io.reactivex:rxjava than 1.1.6 is available: 1.2.2"
+        errorLine1="    compile &apos;io.reactivex:rxjava:1.1.6&apos;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="81"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                android:textSize=&quot;20dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="35"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                android:textSize=&quot;20dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="77"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                android:textSize=&quot;20dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="91"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                    android:textSize=&quot;20dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="111"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                    android:textSize=&quot;20dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="140"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        errorLine1="                android:textSize=&quot;20dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="192"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
+        errorLine1="            android:singleLine=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
+        errorLine1="    android:singleLine=&quot;true&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_text.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
+        errorLine1="                android:singleLine=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="41"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
+        errorLine1="                android:singleLine=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="65"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="`android:singleLine` is deprecated: Use `maxLines=&quot;1&quot;` instead"
+        errorLine1="                android:singleLine=&quot;true&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/rename_deck_view.xml"
+            line="30"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;tambem&quot; is a common misspelling; did you mean &quot;também&quot; ?"
+        errorLine1="    &lt;string name=&quot;explanation2&quot;>A lista ira mostrar as cartas que ja foram jogadas, tambem as que faltam em seu deck enquanto voce joga.&lt;/string>"
+        errorLine2="                                                                                    ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="5"
+            column="85"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;vitoria&quot; is a common misspelling; did you mean &quot;vitória&quot; ?"
+        errorLine1="    &lt;string name=&quot;explanation3&quot;>Que a luz lhe traga a vitoria!&lt;/string>"
+        errorLine2="                                                      ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="6"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;proxima&quot; is a common misspelling; did you mean &quot;próxima&quot; ?"
+        errorLine1="    &lt;string name=&quot;showNextTime&quot;>mostrar proxima vez&lt;/string>"
+        errorLine2="                                        ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="7"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;cannot_launch&quot;>Nao consegue abrir Hearthstone. Ele esta instalado?&lt;/string>"
+        errorLine2="                                 ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="9"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;nao&quot; is a common misspelling; did you mean &quot;não&quot; ?"
+        errorLine1="    &lt;string name=&quot;oops_permission&quot;>Ops, parece que voce nao tem algumas permissoes.&lt;/string>"
+        errorLine2="                                                        ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="10"
+            column="57"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;cannot_locate_heathstone_install&quot;>Nao consegue localizar diretorio de instalacao do Hearthstone&lt;/string>"
+        errorLine2="                                                    ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="14"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;cannot_find_deck&quot;>Nao consegue achar ultimo deck usado&lt;/string>"
+        errorLine2="                                    ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="16"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;ultimo&quot; is a common misspelling; did you mean &quot;último&quot; ?"
+        errorLine1="    &lt;string name=&quot;cannot_find_deck&quot;>Nao consegue achar ultimo deck usado&lt;/string>"
+        errorLine2="                                                       ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="16"
+            column="56"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;cannot_get_latest_cards&quot;>Nao consegue achar informacao de cartas&lt;/string>"
+        errorLine2="                                           ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="17"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Vitorias&quot; is a common misspelling; did you mean &quot;Vitórias&quot; ?"
+        errorLine1="    &lt;string name=&quot;resetCounter&quot;>Resetar contador de Vitorias/Derrotas&lt;/string>"
+        errorLine2="                                                    ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="37"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;proximo&quot; is a common misspelling; did you mean &quot;próximo&quot; ?"
+        errorLine1="    &lt;string name=&quot;next&quot;>proximo ▶&lt;/string>"
+        errorLine2="                        ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="39"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;nao&quot; is a common misspelling; did you mean &quot;não&quot; ?"
+        errorLine1="    &lt;string name=&quot;autoQuitExplanation&quot;>Tentar detectar quando Hearthstone nao esta sendo executado mais e esconder a lista automagicamente.&lt;/string>"
+        errorLine2="                                                                          ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="52"
+            column="75"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;disponivel&quot; is a common misspelling; did you mean &quot;disponível&quot; ?"
+        errorLine1="    &lt;string name=&quot;autoDetectExplanation&quot;>Quando o jogo começar, tente adivinhar o melhor deck disponivel e ative-o automaticamente. Isso pode falhar se voce tem varios deck de uma classe.&lt;/string>"
+        errorLine2="                                                                                              ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="54"
+            column="95"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;varios&quot; is a common misspelling; did you mean &quot;vários&quot; ?"
+        errorLine1="    &lt;string name=&quot;autoDetectExplanation&quot;>Quando o jogo começar, tente adivinhar o melhor deck disponivel e ative-o automaticamente. Isso pode falhar se voce tem varios deck de uma classe.&lt;/string>"
+        errorLine2="                                                                                                                                                                 ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="54"
+            column="162"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;nao&quot; is a common misspelling; did you mean &quot;não&quot; ?"
+        errorLine1="    &lt;string name=&quot;autoAddExplanation&quot;>Quando um deck estiver incompleto, adicione cartas ao deck automaticamente para voce nao ter que adiciona-las manualmente.&lt;/string>"
+        errorLine2="                                                                                                                           ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="56"
+            column="124"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;usuario&quot; is a common misspelling; did you mean &quot;usuário&quot; or &quot;utilizador&quot; ?"
+        errorLine1="    &lt;string name=&quot;username&quot;>Nome de usuario:&lt;/string>"
+        errorLine2="                                    ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="58"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;nao&quot; is a common misspelling; did you mean &quot;não&quot; ?"
+        errorLine1="    &lt;string name=&quot;retrievePassword&quot;>Se voce nao sabe sua senha, va para https://github.com/HearthSim/arcane_tracker/issues/2 para saber como recupera-la&lt;/string>"
+        errorLine2="                                            ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="60"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;trackobotConnectError&quot;>Nao consegue conectar ao Track-o-bot&lt;/string>"
+        errorLine2="                                         ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="71"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="Typos"
+        message="&quot;Nao&quot; is a common misspelling; did you mean &quot;Não&quot; ?"
+        errorLine1="    &lt;string name=&quot;trackobotError&quot;>Nao conseuge upar ao Track-o-bot :-(&lt;/string>"
+        errorLine2="                                  ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="73"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                Timber.e(&quot;wrong heroId&quot; + heroId);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Card.java"
+            line="74"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="            Timber.w(&quot;storedVersion=&quot; + storedVersion + &quot; config.cardBd=&quot; + config.cardDb);"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardDb.java"
+            line="50"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                    Timber.w(&quot;refreshingCards &quot; + endpoint);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardDb.java"
+            line="145"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="        Timber.d(&quot;fetching &quot; + url);"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/CardsAdapter.java"
+            line="203"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                    Timber.e(&quot;inconsistent class index, force to&quot; + Card.classIndexToPlayerClass(ci));"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Deck.java"
+            line="37"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="        Timber.d(&quot;screen: &quot; + mViewManager.getWidth() + &quot;x&quot; + mViewManager.getHeight());"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckCompanion.java"
+            line="41"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="        Timber.d(&quot;Arena&quot; + line);"
+        errorLine2="                 ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="74"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                Timber.e(&quot;skip hero &quot; + cardId);"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="100"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                    Timber.e(&quot;not collectible2 &quot; + cardId);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="113"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="        Timber.d(&quot;LoadingScreen&quot; + line);"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="120"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="            Timber.e(&quot;bad line: &quot; + line);"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="150"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                            Timber.w(&quot;Player &quot; + map.get(&quot;player&quot;) + &quot; has heroId &quot; + player.heroId);"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="231"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                            Timber.w(&quot;I am player &quot; + playerIndex);"
+        errorLine2="                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="290"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                        Timber.w(&quot;initial card &quot; + map.get(&quot;CardID&quot;));"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="297"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                    Timber.w(&quot;firstPlayer is &quot; + firstPlayerBattleTag);"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="307"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="                        Timber.w(&quot;I &quot; + (victory ? &quot;won&quot; : &quot;lost&quot;) + &quot;!&quot;);"
+        errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Parser.java"
+            line="334"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="            Timber.e(&quot;could not find a bar for id &quot; + cardId);"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Utils.java"
+            line="38"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="BinaryOperationInTimber"
+        message="Replace String concatenation with Timber&apos;s string formatting"
+        errorLine1="        Timber.w(df.format(c.getTime()) + s);"
+        errorLine2="                 ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/Utils.java"
+            line="75"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="AllowBackup"
+        message="On SDK version 23 and up, your app data will be automatically backed up and restored on app install. Consider adding the attribute `android:fullBackupContent` to specify an `@xml` resource which configures which files to backup. More info: https://developer.android.com/training/backup/autosyncapi.html"
+        errorLine1="    &lt;application"
+        errorLine2="    ^">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`"
+        errorLine1="            android:layout_weight=&quot;1&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/create_deck_view.xml"
+            line="62"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak (and also breaks Instant Run)"
+        errorLine1="    private static Context sContext;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/ArcaneTrackerApplication.java"
+            line="31"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DeckCompanion` which has field `settings` pointing to `View`); this is a memory leak (and also breaks Instant Run)"
+        errorLine1="    private static DeckCompanion sOpponentCompanion;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainViewCompanion.java"
+            line="17"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DeckCompanion` which has field `settings` pointing to `View`); this is a memory leak (and also breaks Instant Run)"
+        errorLine1="    private static DeckCompanion sPlayerCompanion;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainViewCompanion.java"
+            line="21"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `MainViewCompanion` which has field `shadow` pointing to `View`); this is a memory leak (and also breaks Instant Run)"
+        errorLine1="    private static MainViewCompanion sMainCompanion;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainViewCompanion.java"
+            line="258"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/class_item_view.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/deck_line_view.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="29"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="48"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="            android:layout_width=&quot;match_parent&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="                android:layout_width=&quot;match_parent&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/create_deck_view.xml"
+            line="31"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="                android:layout_width=&quot;match_parent&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="36"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="            android:layout_height=&quot;wrap_content&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="        android:layout_height=&quot;wrap_content&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                android:layout_height=&quot;wrap_content&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="30"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                    android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="38"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="        android:layout_width=&quot;match_parent&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/main_view.xml"
+            line="11"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                    android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="106"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                    android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="135"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                    android:layout_width=&quot;wrap_content&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="164"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="                    android:layout_width=&quot;match_parent&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="242"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_width` of `0dp` instead of `match_parent` for better performance"
+        errorLine1="                    android:layout_width=&quot;match_parent&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="262"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="InefficientWeight"
+        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance"
+        errorLine1="                android:layout_height=&quot;wrap_content&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="305"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        message="Nested weights are bad for performance"
+        errorLine1="                    android:layout_weight=&quot;1&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="40"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/colorPrimary` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;@color/colorPrimary&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#fff` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;#fff&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#80000000` with a theme that also paints a background (inferred theme is `@style/AppTheme`)"
+        errorLine1="    android:background=&quot;#80000000&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gotIt` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/gotIt&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.next` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/next&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="19"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.opponent` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/opponent&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.player` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/player&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="49"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;waitingForCards&quot;>Downloading Cards...&lt;/string>"
+        errorLine2="                                   ^">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="72"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;waitingForCards&quot;>&quot;Téléchargement de cartes... &quot;&lt;/string>"
+        errorLine2="                                   ^">
+        <location
+            file="src/main/res/values-fr/strings.xml"
+            line="74"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;waitingForCards&quot;>Baixando cartas...&lt;/string>"
+        errorLine2="                                   ^">
+        <location
+            file="src/main/res/values-pt/strings.xml"
+            line="75"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;waitingForCards&quot;>&quot;Загрузка карты... &quot;&lt;/string>"
+        errorLine2="                                   ^">
+        <location
+            file="src/main/res/values-ru/strings.xml"
+            line="81"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="IconExpectedSize"
+        message="Incorrect icon size for `mipmap-xxxhdpi/ic_launcher.png`: expected 192x192, but was 512x512">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: at_035t.png, at_036t.png">
+        <location
+            file="src/main/res/drawable-ldpi/at_036t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/at_035t.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: at_037a.png, at_037b.png">
+        <location
+            file="src/main/res/drawable-ldpi/at_037b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/at_037a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: at_132_rogue.png, at_132_roguet.png">
+        <location
+            file="src/main/res/drawable-ldpi/at_132_roguet.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/at_132_rogue.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brm_004.png, brm_004t.png">
+        <location
+            file="src/main/res/drawable-ldpi/brm_004t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brm_004.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brm_027p.png, brm_027ph.png">
+        <location
+            file="src/main/res/drawable-ldpi/brm_027ph.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brm_027p.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma01_1.png, brma01_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma01_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma01_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma01_2.png, brma01_2h.png, brma01_2h_2_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma01_2h_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma01_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma01_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma02_1.png, brma02_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma02_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma02_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma02_2_2_tb.png, brma02_2_2c_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma02_2_2c_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma02_2_2_tb.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma02_2.png, brma02_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma02_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma02_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma03_1.png, brma03_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma03_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma03_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma03_3.png, brma03_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma03_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma03_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma04_1.png, brma04_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma04_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma04_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma04_3.png, brma04_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma04_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma04_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma04_4.png, brma04_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma04_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma04_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma05_1.png, brma05_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma05_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma05_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma05_2.png, brma05_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma05_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma05_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma05_3.png, brma05_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma05_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma05_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma06_1.png, brma06_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma06_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma06_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma06_2.png, brma06_2h.png, brma06_2h_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma06_2h_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma06_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma06_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma06_3.png, brma06_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma06_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma06_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma06_4.png, brma06_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma06_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma06_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma07_1.png, brma07_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma07_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma07_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma07_2.png, brma07_2_2_tb.png, brma07_2_2c_tb.png, brma07_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma07_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma07_2_2c_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma07_2_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma07_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma08_1.png, brma08_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma08_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma08_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma08_2.png, brma08_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma08_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma08_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_1.png, brma09_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_2.png, brma09_2_tb.png, brma09_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_2ht.png, brma09_2t.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_2t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_2ht.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_3.png, brma09_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_3ht.png, brma09_3t.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_3t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_3ht.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_4.png, brma09_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_4ht.png, brma09_4t.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_4t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_4ht.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma09_5.png, brma09_5h.png, brma09_5ht.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma09_5ht.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma09_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma10_1.png, brma10_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma10_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma10_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma10_3.png, brma10_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma10_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma10_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma10_4.png, brma10_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma10_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma10_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma10_5.png, brma10_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma10_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma10_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma11_1.png, brma11_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma11_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma11_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma11_2.png, brma11_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma11_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma11_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_2.png, brma12_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_3.png, brma12_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_4.png, brma12_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_5.png, brma12_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_6.png, brma12_6h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_6h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_6.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma12_7.png, brma12_7h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma12_7h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma12_7.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma13_1.png, brma13_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma13_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma13_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma13_2.png, brma13_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma13_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma13_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma13_3.png, brma13_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma13_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma13_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma13_4.png, brma13_4_2_tb.png, brma13_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma13_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma13_4_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma13_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_10.png, brma14_10h.png, brma14_10h_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_10h_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_10h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_10.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_2.png, brma14_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_4.png, brma14_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_5.png, brma14_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_6.png, brma14_6h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_6h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_6.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_7.png, brma14_7h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_7h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_7.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma14_8.png, brma14_8h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma14_8h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma14_8.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma15_1.png, brma15_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma15_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma15_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma15_2.png, brma15_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma15_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma15_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma16_1.png, brma16_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma16_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma16_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma16_2.png, brma16_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma16_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma16_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma17_2.png, brma17_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma17_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma17_3.png, brma17_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma17_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma17_5.png, brma17_5_tb.png, brma17_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma17_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_5_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma17_6.png, brma17_6h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma17_6h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_6.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: brma17_8.png, brma17_8h.png">
+        <location
+            file="src/main/res/drawable-ldpi/brma17_8h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/brma17_8.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: cs2_034.png, cs2_034_h1.png">
+        <location
+            file="src/main/res/drawable-ldpi/cs2_034_h1.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/cs2_034.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: cs2_102.png, cs2_102_h1.png">
+        <location
+            file="src/main/res/drawable-ldpi/cs2_102_h1.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/cs2_102.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ds1h_292.png, ds1h_292_h1.png">
+        <location
+            file="src/main/res/drawable-ldpi/ds1h_292_h1.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/ds1h_292.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ex1_154a.png, ex1_154b.png">
+        <location
+            file="src/main/res/drawable-ldpi/ex1_154b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/ex1_154a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ex1_155a.png, ex1_155b.png">
+        <location
+            file="src/main/res/drawable-ldpi/ex1_155b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/ex1_155a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ex1_160a.png, ex1_160b.png">
+        <location
+            file="src/main/res/drawable-ldpi/ex1_160b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/ex1_160a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ex1_164a.png, ex1_164b.png">
+        <location
+            file="src/main/res/drawable-ldpi/ex1_164b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/ex1_164a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: gvg_030a.png, gvg_030b.png">
+        <location
+            file="src/main/res/drawable-ldpi/gvg_030b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/gvg_030a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: gvg_032a.png, gvg_032b.png">
+        <location
+            file="src/main/res/drawable-ldpi/gvg_032b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/gvg_032a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: gvg_041a.png, gvg_041b.png">
+        <location
+            file="src/main/res/drawable-ldpi/gvg_041b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/gvg_041a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_warrior.png, hero_01.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_01.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_warrior.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_shaman.png, hero_02.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_02.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_shaman.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_rogue.png, hero_03.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_03.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_rogue.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_paladin.png, hero_04.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_04.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_paladin.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_hunter.png, hero_05.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_05.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_hunter.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_druid.png, hero_06.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_06.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_druid.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_warlock.png, hero_07.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_07.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_warlock.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_mage.png, hero_08.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_08.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_mage.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_priest.png, hero_09.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_09.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_priest.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: h_unknown.png, hero_10.png">
+        <location
+            file="src/main/res/drawable-ldpi/hero_10.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/h_unknown.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_004a.png, kar_009.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_009.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_004a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_036.png, kar_036e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_036e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_036.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_037.png, kar_037t.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_037t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_037.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_077.png, kar_077e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_077e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_077.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_095.png, kar_095e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_095e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_095.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_114.png, kar_114e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_114e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_114.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_702.png, kar_702e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_702e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_702.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a01_01.png, kar_a01_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a01_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a01_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a01_02.png, kar_a01_02e.png, kar_a01_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a01_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a01_02e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a01_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_01.png, kar_a02_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_02.png, kar_a02_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_03.png, kar_a02_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_04.png, kar_a02_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_05.png, kar_a02_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_06.png, kar_a02_06e2.png, kar_a02_06h.png, kar_a02_06he.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_06he.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_06h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_06e2.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_06.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_09.png, kar_a02_09e.png, kar_a02_09eh.png, kar_a02_09h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_09h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_09eh.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_09e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_09.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_12.png, kar_a02_12h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_12h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_12.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a02_13.png, kar_a02_13h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_13h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a02_13.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_026t.png, kar_a10_02.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a10_02.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_026t.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a10_boss1.png, kar_a10_boss1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a10_boss1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a10_boss1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_a10_boss2.png, kar_a10_boss2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kar_a10_boss2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_a10_boss2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_00_03.png, kara_00_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_00_04.png, kara_00_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_04_01h.png, kara_04_01heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_04_01heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_04_01h.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_04_05.png, kara_04_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_04_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_04_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_05_01b.png, kara_05_01e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01b.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_05_01h.png, kara_05_01hheroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01hheroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01h.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_05_02.png, kara_05_02heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_02heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_06_02.png, kara_06_02heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_02heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_06_03hp.png, kara_06_03hpheroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_03hpheroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_03hp.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_061.png, kara_07_01.png, kara_07_01heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_01heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_01.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_061.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_07_03.png, kara_07_03heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_03heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_07_05.png, kara_07_05heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_05heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_07_06.png, kara_07_06heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_06heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_06.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_07_07.png, kara_07_07heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_07heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_07.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_07_08.png, kara_07_08heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_08heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_07_08.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_08_01.png, kara_08_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_08_02.png, kara_08_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_08_03.png, kara_08_03e.png, kara_08_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_03e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_08_05.png, kara_08_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_08_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_01.png, kara_09_01heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_01heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_03a.png, kara_09_03a_heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_03a_heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_03a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_03.png, kara_09_03heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_03heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_05.png, kara_09_05heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_05heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_06.png, kara_09_06heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_06heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_06.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_07.png, kara_09_07heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_07heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_07.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_09_08.png, kara_09_08_heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_08_heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_09_08.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_11_01.png, kara_11_01heroic.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_11_01heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_11_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_12_01.png, kara_12_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_12_02.png, kara_12_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_12_03.png, kara_12_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_12_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_13_01.png, kara_13_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_13_02.png, kara_13_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_13_03.png, kara_13_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_00_01.png, kara_00_01h.png, kara_13_06.png, kara_13_06h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_06h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_06.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_13_12.png, kara_13_12h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_12h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_12.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_00_02.png, kara_00_02h.png, kara_13_13.png, kara_13_13h.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_13h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_13.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_00_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_05_01hp.png, kara_05_01hpheroic.png, kara_13_19e.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_19e.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01hpheroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_05_01hp.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kara_06_01.png, kara_06_01heroic.png, kara_13_23.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_23.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_01heroic.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kara_06_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: kar_097t.png, kara_13_26.png">
+        <location
+            file="src/main/res/drawable-ldpi/kara_13_26.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/kar_097t.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loe_008.png, loe_008h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loe_008h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loe_008.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loe_115a.png, loe_115b.png">
+        <location
+            file="src/main/res/drawable-ldpi/loe_115b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loe_115a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea01_01.png, loea01_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea01_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea01_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea01_02.png, loea01_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea01_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea01_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea01_11.png, loea01_11h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea01_11h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea01_11.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea01_12.png, loea01_12h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea01_12h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea01_12.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea02_01.png, loea02_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea02_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea02_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea02_02.png, loea02_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea02_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea02_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_01.png, loea04_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_02.png, loea04_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_06a.png, loea04_06b.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_06b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_06a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_13bt.png, loea04_13bth.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_13bth.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_13bt.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_23.png, loea04_23h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_23h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_23.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_24.png, loea04_24h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_24h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_24.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_25.png, loea04_25h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_25h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_25.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_28a.png, loea04_28b.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_28b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_28a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea04_29a.png, loea04_29b.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea04_29b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea04_29a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea05_01.png, loea05_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea05_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea05_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea05_02.png, loea05_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea05_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea05_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea05_02a.png, loea05_02ha.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea05_02ha.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea05_02a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea05_03.png, loea05_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea05_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea05_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea06_02.png, loea06_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea06_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea06_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea06_02t.png, loea06_02th.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea06_02th.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea06_02t.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea06_03.png, loea06_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea06_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea06_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea06_04.png, loea06_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea06_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea06_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea07_02.png, loea07_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea07_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea07_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea07_03.png, loea07_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea07_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea07_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea08_01.png, loea08_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea08_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea08_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_1.png, loea09_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_2.png, loea09_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_10.png, loea09_11.png, loea09_12.png, loea09_13.png, loea09_3b.png, loea09_3c.png, loea09_3d.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_3d.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_3c.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_3b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_13.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_12.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_11.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_10.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_4.png, loea09_4h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_4h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_4.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_5.png, loea09_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_6.png, loea09_6h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_6h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_6.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_7.png, loea09_7h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_7h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_7.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_8.png, loea09_8h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_8h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_8.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea09_9.png, loea09_9h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea09_9h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea09_9.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea10_1.png, loea10_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea10_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea10_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea10_2.png, loea10_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea10_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea10_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea10_5.png, loea10_5h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea10_5h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea10_5.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea12_1.png, loea12_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea12_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea12_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea12_2.png, loea12_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea12_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea12_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea13_1.png, loea13_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea13_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea13_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea13_2.png, loea13_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea13_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea13_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea14_1.png, loea14_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea14_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea14_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea14_2.png, loea14_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea14_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea14_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea15_1.png, loea15_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea15_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea15_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea15_2.png, loea15_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea15_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea15_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea15_3.png, loea15_3h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea15_3h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea15_3.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_16.png, loea16_16h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_16h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_16.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_18.png, loea16_18h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_18h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_18.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_19.png, loea16_19h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_19h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_19.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_1.png, loea16_1h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_1h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_1.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_21.png, loea16_21h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_21h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_21.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_22.png, loea16_22h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_22h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_22.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_23.png, loea16_23h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_23h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_23.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_24.png, loea16_24h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_24h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_24.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_25.png, loea16_25h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_25h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_25.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_26.png, loea16_26h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_26h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_26.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_27.png, loea16_27h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_27h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_27.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea16_2.png, loea16_2h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea16_2h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea16_2.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: loea_01.png, loea_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/loea_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/loea_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax10_01.png, nax10_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax10_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax10_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax10_02.png, nax10_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax10_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax10_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax10_03.png, nax10_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax10_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax10_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax11_01.png, nax11_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax11_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax11_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax11_02.png, nax11_02h.png, nax11_02h_2_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax11_02h_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax11_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax11_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax12_01.png, nax12_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax12_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax12_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax12_02.png, nax12_02h.png, nax12_02h_2_tb.png, nax12_02h_2c_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax12_02h_2c_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax12_02h_2_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax12_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax12_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax12_03.png, nax12_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax12_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax12_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax13_01.png, nax13_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax13_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax13_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: fp1_015.png, nax13_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax13_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/fp1_015.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: fp1_014.png, nax13_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax13_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/fp1_014.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax14_01.png, nax14_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax14_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax14_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax15_01.png, nax15_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax15_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax15_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax15_02.png, nax15_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax15_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax15_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax15_03n.png, nax15_03t.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax15_03t.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax15_03n.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax15_04.png, nax15_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax15_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax15_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax2_01.png, nax2_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax2_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax2_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax2_03.png, nax2_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax2_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax2_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax2_05.png, nax2_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax2_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax2_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax3_01.png, nax3_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax3_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax3_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax3_02.png, nax3_02_tb.png, nax3_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax3_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax3_02_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax3_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax4_01.png, nax4_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax4_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax4_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax4_03.png, nax4_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax4_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax4_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax4_04.png, nax4_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax4_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax4_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax5_01.png, nax5_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax5_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax5_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax5_02.png, nax5_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax5_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax5_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax6_01.png, nax6_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax6_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax6_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax6_02.png, nax6_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax6_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax6_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax7_01.png, nax7_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax7_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax7_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax7_03.png, nax7_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax7_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax7_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax7_04.png, nax7_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax7_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax7_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax8_01.png, nax8_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax8_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax8_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax8_02.png, nax8_02h.png, nax8_02h_tb.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax8_02h_tb.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax8_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax8_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax9_01.png, nax9_01h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax9_01h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax9_01.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax9_02.png, nax9_02h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax9_02h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax9_02.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax9_03.png, nax9_03h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax9_03h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax9_03.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax9_04.png, nax9_04h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax9_04h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax9_04.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: nax9_05.png, nax9_05h.png">
+        <location
+            file="src/main/res/drawable-ldpi/nax9_05h.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/nax9_05.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: new1_007a.png, new1_007b.png">
+        <location
+            file="src/main/res/drawable-ldpi/new1_007b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/new1_007a.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: og_279.png, og_280.png">
+        <location
+            file="src/main/res/drawable-ldpi/og_280.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/og_279.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: og_202c.png, og_249a.png, og_314b.png">
+        <location
+            file="src/main/res/drawable-ldpi/og_314b.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/og_249a.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/og_202c.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: tb_factionwar_hero_annoy.png, tb_mechwar_boss1.png">
+        <location
+            file="src/main/res/drawable-ldpi/tb_mechwar_boss1.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/tb_factionwar_hero_annoy.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: tb_pickyourfate_11b.png, tb_pickyourfate_11rand.png">
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_11rand.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_11b.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: tb_pickyourfate_6.png, tb_pickyourfate_6_2nd.png">
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_6_2nd.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_6.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: tb_pickyourfate_8.png, tb_pickyourfate_8rand.png">
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_8rand.png"/>
+        <location
+            file="src/main/res/drawable-ldpi/tb_pickyourfate_8.png"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="        &lt;TextView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="19"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="        &lt;TextView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="        &lt;TextView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="    &lt;TextView"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/card_view.xml"
+            line="12"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="    &lt;TextView"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/class_item_view.xml"
+            line="11"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="        &lt;TextView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="89"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="                &lt;TextView"
+        errorLine2="                ^">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="36"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="            &lt;TextView"
+        errorLine2="            ^">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="            &lt;TextView"
+        errorLine2="            ^">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="195"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GoogleAppIndexingWarning"
+        message="App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW intent filter. See issue explanation for more details."
+        errorLine1="    &lt;application"
+        errorLine2="    ^">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="10"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType` or a `hint`"
+        errorLine1="            &lt;EditText"
+        errorLine2="            ^">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="The view name (`@+id/password`) suggests this is a password, but it does not include &apos;`textPassword`&apos; in the `inputType`"
+        errorLine1="                    android:id=&quot;@+id/password&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="261"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ButtonCase"
+        message="The standard Android way to capitalize cancel is &quot;Cancel&quot; (tip: use `@android:string/cancel` instead)"
+        errorLine1="    &lt;string name=&quot;cancel&quot;>cancel&lt;/string>"
+        errorLine2="                          ^">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="30"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        message="Custom view `net/mbonnin/arcanetracker/HandleView` overrides `onTouchEvent` but not `performClick`"
+        errorLine1="    public boolean onTouchEvent(MotionEvent event) {"
+        errorLine2="                   ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/HandleView.java"
+            line="116"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/class_item_view.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageButton"
+        errorLine2="            ^">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^">
+        <location
+            file="src/main/res/layout/deck_line_view.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageButton"
+        errorLine2="                ^">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="46"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="[Accessibility] Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="55"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            cost.setText(card.cost + &quot;&quot;);"
+        errorLine2="                         ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="89"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    count.setText(c + &quot;&quot;);"
+        errorLine2="                                  ~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckAdapter.java"
+            line="97"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            winLoss.setText(deck.wins + &quot; - &quot; + deck.losses);"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckCompanion.java"
+            line="105"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            winLoss.setText(deck.wins + &quot; - &quot; + deck.losses);"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckCompanion.java"
+            line="105"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        cardCount.setText(mDeck.getCardCount() + &quot;/ 30&quot;);"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckEditorView.java"
+            line="60"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        cardCount.setText(mDeck.getCardCount() + &quot;/ 30&quot;);"
+        errorLine2="                                                 ~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckEditorView.java"
+            line="60"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="[I18N] Hardcoded string &quot;New Deck&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;New Deck&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/create_deck_view.xml"
+            line="33"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="[I18N] Hardcoded string &quot;Track-o-bot&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Track-o-bot&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="190"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="[I18N] Hardcoded string &quot;username&quot;, should use `@string` resource"
+        errorLine1="                    android:hint=&quot;username&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="245"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="[I18N] Hardcoded string &quot;password&quot;, should use `@string` resource"
+        errorLine1="                    android:hint=&quot;password&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="265"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/deleteButton` can overlap `@id/cancelButton` if @string/cancel, @string/delete grow due to localized text expansion"
+        errorLine1="        &lt;Button"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/delete_confirmation_view.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/renameButton` can overlap `@id/cancelButton` if @string/cancel, @string/rename grow due to localized text expansion"
+        errorLine1="        &lt;Button"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/rename_deck_view.xml"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/resetButton` can overlap `@id/cancelButton` if @string/cancel, @string/reset grow due to localized text expansion"
+        errorLine1="        &lt;Button"
+        errorLine2="        ^">
+        <location
+            file="src/main/res/layout/reset_counter_confirm_view.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry"
+        errorLine1="            android:paddingLeft=&quot;2dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        layoutParams.gravity = Gravity.TOP | Gravity.LEFT;"
+        errorLine2="                                                     ~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/ViewManager.java"
+            line="130"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="78"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;center_vertical|left&quot;"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="34"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:paddingStart=&quot;2dp&quot;` to better support right-to-left layouts"
+        errorLine1="            android:paddingLeft=&quot;2dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/bar_card.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                android:layout_gravity=&quot;right|bottom&quot;"
+        errorLine2="                                        ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/create_deck_view.xml"
+            line="68"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;20dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;20dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="29"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_editor_view.xml"
+            line="48"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:gravity=&quot;left&quot;"
+        errorLine2="                         ~~~~">
+        <location
+            file="src/main/res/layout/deck_line_view.xml"
+            line="18"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;3dp&quot;` to better support right-to-left layouts"
+        errorLine1="                    android:layout_marginLeft=&quot;3dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="41"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                    android:gravity=&quot;left&quot;"
+        errorLine2="                                     ~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="44"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginEnd=&quot;3dp&quot;` to better support right-to-left layouts"
+        errorLine1="                    android:layout_marginRight=&quot;3dp&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/deck_view.xml"
+            line="50"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/delete_confirmation_view.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/delete_confirmation_view.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="17"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="27"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="37"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="47"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="57"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/menu_view.xml"
+            line="67"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:layout_gravity=&quot;top|right&quot;"
+        errorLine2="                                ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="11"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginEnd=&quot;20dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_marginRight=&quot;20dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:layout_gravity=&quot;bottom|right&quot;"
+        errorLine2="                                ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="22"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginEnd=&quot;20dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:layout_marginRight=&quot;20dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/onboarding_view.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/rename_deck_view.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/rename_deck_view.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/reset_counter_confirm_view.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/reset_counter_confirm_view.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="42"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="123"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="152"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="181"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider adding `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts"
+        errorLine1="                android:layout_marginLeft=&quot;10dp&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="296"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="                    android:layout_gravity=&quot;bottom|right&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings_view.xml"
+            line="313"
+            column="45"/>
+    </issue>
+
+</issues>
