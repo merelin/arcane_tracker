@@ -2,13 +2,6 @@
 <issues format="4" by="lint 2.3.0-alpha1">
 
     <issue
-        id="GradleCompatible"
-        message="All com.android.support libraries must use the exact same version specification (mixing versions can lead to runtime crashes). Found versions 24.2.1, 24.2.0. Examples include com.android.support:animated-vector-drawable:24.2.1 and com.android.support:cardview-v7:24.2.0">
-        <location
-            file="build.gradle"/>
-    </issue>
-
-    <issue
         id="ScrollViewSize"
         message="This LinearLayout should use `android:layout_height=&quot;wrap_content&quot;`"
         errorLine1="            android:layout_height=&quot;match_parent&quot;"
@@ -571,89 +564,12 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of com.android.support:support-v4 than 24.2.1 is available: 25.0.0"
-        errorLine1="    compile &quot;com.android.support:support-v4:$supportLibVersion&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="69"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:appcompat-v7 than 24.2.1 is available: 25.0.0"
-        errorLine1="    compile &quot;com.android.support:appcompat-v7:$supportLibVersion&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="70"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:design than 24.2.0 is available: 25.0.0"
-        errorLine1="    compile &quot;com.android.support:design:$supportLibVersion&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="71"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:recyclerview-v7 than 24.2.0 is available: 25.0.0"
-        errorLine1="    compile &quot;com.android.support:recyclerview-v7:$supportLibVersion&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="72"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:cardview-v7 than 24.2.0 is available: 25.0.0"
-        errorLine1="    compile &quot;com.android.support:cardview-v7:$supportLibVersion&quot;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="73"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
         message="A newer version of com.google.android.gms:play-services-auth than 9.6.1 is available: 9.8.0"
         errorLine1="    compile &quot;com.google.android.gms:play-services-auth:$playServicesVersion&quot;"
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="build.gradle"
             line="88"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:multidex than 1.0.0 is available: 1.0.1"
-        errorLine1="    compile &apos;com.android.support:multidex:1.0.0&apos;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="92"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of com.android.support:appcompat-v7 than 24.2.1 is available: 25.0.0"
-        errorLine1="    compile &apos;com.android.support:appcompat-v7:24.2.1&apos;"
-        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="97"
             column="5"/>
     </issue>
 
@@ -688,6 +604,28 @@
             file="build.gradle"
             line="81"
             column="5"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="This API is marked as internal to the support library and should not be accessed from apps"
+        errorLine1="        return (DeckEditorView) LayoutInflater.from(new ContextThemeWrapper(context, android.R.style.Theme_Material_Light)).inflate(R.layout.deck_editor_view, null);"
+        errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/DeckEditorView.java"
+            line="72"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="This API is marked as internal to the support library and should not be accessed from apps"
+        errorLine1="            Context context = new ContextThemeWrapper(this, R.style.AppThemeLight);"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/net/mbonnin/arcanetracker/MainActivity.java"
+            line="140"
+            column="31"/>
     </issue>
 
     <issue

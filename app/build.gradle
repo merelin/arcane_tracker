@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "net.mbonnin.arcanetracker"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 109
         versionName "1.09"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -56,7 +56,7 @@ android {
 }
 
 ext {
-    supportLibVersion = '24.2.0'
+    supportLibVersion = '25.0.0'
     playServicesVersion = '9.6.1'
 }
 
@@ -89,12 +89,11 @@ dependencies {
     compile "com.google.firebase:firebase-core:$playServicesVersion"
     compile "com.google.firebase:firebase-crash:$playServicesVersion"
 
-    compile 'com.android.support:multidex:1.0.0'
     compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
     compile 'com.squareup.picasso:picasso:2.5.2'
 
-    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
     testCompile 'junit:junit:4.12'
 }
 
