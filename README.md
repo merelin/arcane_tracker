@@ -7,7 +7,7 @@ An automatic Hearthstone tracker for Android. See https://arcanetracker.com/ for
 
 There are several ways to contribute:
 
-#### Pull request are generally welcome. 
+#### Pull request are generally welcome:
  * In general, it's best to reach out before starting to work on anything too complicated. For an example, open an issue with the proposed fix improvment so a discussion can happen before the actual fix. 
  * Short pull requests are prefered.
 #### Translations: 
